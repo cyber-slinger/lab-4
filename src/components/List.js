@@ -8,19 +8,19 @@ function Task(props){
 
 function List(props) {
 	var taskarray=[];
-	//Using of loop
-	for (let i=0;i<props.task.length;i++)
-	{
-		let desc = props.task[i].description;
-		let stat =props.task[i].completed;
-		taskarray.push(<Task description={desc} completed={stat}/>)
-	}
-
+	//Deletion of loop
+	//Using of Map function
 	return (
 		<div>
 			<h1>{ props.heading }</h1>
 			<ul>
-				{taskarray}
+				{/*{tasks} */}
+				{ props.tasks.map(task =>
+					<Task
+					description={task.description}
+					completed={task.completed}
+					/>
+				)}
 			</ul>
 		</div>
 	);
