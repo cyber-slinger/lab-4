@@ -4,7 +4,7 @@ import './App.css';
 function App() {
     return (
         <div className='page'>     
-            <List heading='My Tasks'/>
+            <List heading='My Task 1'/>
         </div>
     );
 }
